@@ -1,0 +1,39 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -N 5 -A "weka.core.EuclideanDistance -R first-last" -I 500 -S 10
+Relation:     train-a-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R16-29,31-44-weka.filters.unsupervised.attribute.Remove-R27-41-weka.filters.unsupervised.attribute.Remove-R1-3,6-7,9-35
+Instances:    99999
+Attributes:   3
+              Patient-Sex
+              Age
+              Patient-Disposition
+Test mode:    evaluate on training data
+
+=== Model and evaluation on training set ===
+
+
+kMeans
+======
+
+Number of iterations: 18
+Within cluster sum of squared errors: 2357.9570919202224
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                                   Cluster#
+Attribute              Full Data          0          1          2          3          4
+                         (99999)    (25068)    (45824)    (20003)     (1780)     (7324)
+=======================================================================================
+Patient-Sex                    F          F          M          F          F          F
+Age                      72.7984    85.8701    70.4331     70.414     77.873    48.1348
+Patient-Disposition       5.0899     3.8845     4.9004      3.032     60.277     2.6088
+
+
+Clustered Instances
+
+0      25068 ( 25%)
+1      45824 ( 46%)
+2      20003 ( 20%)
+3       1780 (  2%)
+4       7324 (  7%)
+

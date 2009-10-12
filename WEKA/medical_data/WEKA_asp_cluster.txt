@@ -1,0 +1,21 @@
+Method:
+1) The first thing I did after importing the train-a.csv file into WEKA was to save it back out as a .arff data to save the metadata and hopefully make it easier ad faster to open again later.
+
+2) I then remove all the data that I know I will not be interested in working with like the diagnostic codes and procedure codes.
+
+3) I then decide after looking through the rest of the data that I would like to see if the age and sex of the patient effects the disposition of the patient.  So I remove all the other fields beside these three to make it easier to analysis and save it as 'train-a-asp.arff'.
+
+4) I then try to change the patient-disposition codes to nominal values by inserting the list of possible values it could be in the header of the 'train-a-asp.arff' file but when I try to reopen it in WEKA, I get an error that the nominal values were not define in the header.  After fighting with this for awhile without any luck I decided to just leave it at numeric values and go on to the clustering
+
+5) I then did a clustering algorithm on these data using WEKA.  I decided to use the simple k-means method with Euclidean distance similarity metric with a max iteration of 500.  The reason I chose Euclidean is that it is the metric I am most familiar with and will probably understand the output better. I also believe it was an okay metric to use because the data that I give it to do the clustering are mostly classify as numeric data beside the gender data.  
+
+6) I try a few runs with 10 k-means centroids to start and it give me some data but it looks like some of the cluster were repeating or split of the same relative cluster so I change it to 5 centroids to start and the cluster data seems to look better.
+
+Result:
+1) Just taking a look at the clusters, it doesn't look like the age or gender effects the disposition of the patient at all.  But if were to look at the some of the visualization with certain x and y axis we could kinda of see some grouping.
+
+2) If we put the age on the y-axis and cluster on the x-axis with disposition as the color, we could see that cluster3 contains almost all of the higher disposition codes and it is cluster mostly around the ages of ~60-90.  This tells us that the higher disposition codes probably deals with disease or symptoms that affects the elderly.  While the lower disposition codes effects all the ages.
+
+3)  If we were to look at the visualization with the y-axis being gender, it looks like cluster3 is females, which also can be said that the higher disposition codes affects the female population of the data set more.  The only cluster that was decided male was cluster1 and that it is mostly the lower disposition codes with a few higher splatter in there.
+
+4) Because the disposition codes were classify as numeric and the way WEKA visualization does the coloring it is hard to tell the disposition codes more clearly than just the generalized higher and lower codes.  I am also not too sure the visualization is showing the colors correctly and not just hiding some of the other colors behind the other so I am unable to see them.  But from the visualization of the clustering, we could see that age and gender does play a minor part in the patients' disposition codes.

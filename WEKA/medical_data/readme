@@ -1,0 +1,5 @@
+ReadMe
+__________________
+This folder is for data mining of the Medical data. 
+
+'WEKA_asp_cluster.txt' gives the methods and results for the data mining. 'cluster_data5.txt' contains the clustering data from WEKA.  The other files are some visualizations screen shot from the clustering of the data.
