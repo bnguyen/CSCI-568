@@ -2,4 +2,6 @@ ReadMe
 __________________
 This folder is for data mining of the Medical data. 
 
-'WEKA_asp_cluster.txt' gives the methods and results for the data mining. 'cluster_data5.txt' contains the clustering data from WEKA.  The other files are some visualizations screen shot from the clustering of the data.
+'WEKA_asp_cluster.txt' gives the methods and results for the data mining. 'cluster_data5.txt' contains the clustering data from WEKA.  The 'visual_xdis_yage5', 'visual_yage5' and 'Visual_ysex5' files are some visualizations screen shot from the clustering of the data.
+
+'WEKA_classifier.txt' gives the method and results for the data mining classifier.  'classifierZeroR_10.txt' contains the data for the ZeroR classifier. 'classifierDecisionT_10.txt' contains the data for the Decision Table classifier. 

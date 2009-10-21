@@ -1,0 +1,21 @@
+Method:
+1) I started off with the same file that I used for the clustering which no longer contained the diagnostic codes and procedure codes. Then I remove a few more attribute that didn't seems too important to the data set.  I end up with 31 attribute at the end.
+
+2) Afterward I check to see what the data types for the attributes.  All the attributes turn out to be nominal except for the patient-disposition, which was numeric so I change it to nominal with the WEKA filter.
+
+3) I then ran a ZeroR classification on the data with the patient-disposition chosen and a cross-validation folds of 10. The classification ran pretty quick, like lass than a minute.
+
+4) I decided to try choose another attribute to see how the the classification can change. I try running on cost weight but it froze my computer and I have to restart WEKA everytime.  So I decided not to risk it anymore and just kept it with the patient-disposition.
+
+5) After that I ran the decision table classification.  Again using patient-disposition as attribute to predict. I set it to do a 10 fold cross -validation classification.  I chose the the crossval of 1 and BestFirst -D1 -N5 option for the decision table.  It took a few hours to run the whole classification.
+
+
+Result:
+	ZeroR:
+1) The ZeroR classifier ran pretty fast.  I'm not sure why it was so fast but since it did so overtime that I ran it I am assuming that its working correctly.  The classifier summary shows that it was able to correctly classify 44% of the data doing a 10 fold cross validation. Looking at the summary it seems that the ZeroR classifier try to classify everything to patient-disposition of 1.  This would be a good reason for it to go so fast but I'm not sure why it does this every time I ran the classifier.  Trying to classify it with another attribute causes my computer to crash so I'm gonna leave this result for now.
+
+	DecisionTable:
+1) The Decision Table classifier took a long time to run using a total of 3330 rules.  This type of classifier was slightly better than the ZeroR, getting approximately 50% correct with a 10 fold cross-validation. The confusion matrix of the classification looks a lot more spread than the ZeroR but it is still mostly in the lower number of patient-disposition. The classifier chose the higher patient-disposition very sparsely. One reason for this is the the actual data has relatively very low records with high patient-disposition and with so small a population to work with its harder for the classifier to generate good rules for the them.
+
+2) After relooking at the assignment before submitting to github I released that I did a Decision TABLE instead of a Decision TREE.  Its a little late to run the classifier correctly and get it in before midnight.  So i'm gonna run the classifier but commit this data for now.  Once I get a few runs of the Decision Tree classifier and it looks good, I will commit that to the repository later.   
+
