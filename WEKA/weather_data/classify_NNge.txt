@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.NNge -G 5 -I 5
+Relation:     weather.symbolic
+Instances:    14
+Attributes:   5
+              outlook
+              temperature
+              humidity
+              windy
+              play
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+NNGE classifier
+
+Rules generated :
+	class no IF : outlook in {rainy} ^ temperature in {mild,cool} ^ humidity in {high,normal} ^ windy in {TRUE}  (2)
+	class yes IF : outlook in {overcast,rainy} ^ temperature in {hot,mild,cool} ^ humidity in {high,normal} ^ windy in {FALSE}  (5)
+	class yes IF : outlook in {overcast} ^ temperature in {mild,cool} ^ humidity in {high,normal} ^ windy in {TRUE}  (2)
+	class yes IF : outlook in {sunny} ^ temperature in {mild,cool} ^ humidity in {normal} ^ windy in {TRUE,FALSE}  (2)
+	class no IF : outlook in {sunny} ^ temperature in {hot,mild} ^ humidity in {high} ^ windy in {TRUE,FALSE}  (3)
+
+Stat :
+	class yes : 3 exemplar(s) including 3 Hyperrectangle(s) and 0 Single(s).
+	class no : 2 exemplar(s) including 2 Hyperrectangle(s) and 0 Single(s).
+
+	Total : 5 exemplars(s) including 5 Hyperrectangle(s) and 0 Single(s).
+
+	Feature weights : [0.24674981977443894 0.029222565658954577 0.15183550136234153 0.04812703040826924]
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          11               78.5714 %
+Incorrectly Classified Instances         3               21.4286 %
+Kappa statistic                          0.5116
+Mean absolute error                      0.2143
+Root mean squared error                  0.4629
+Relative absolute error                 45      %
+Root relative squared error             93.8273 %
+Total Number of Instances               14     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.889     0.4        0.8       0.889     0.842      0.744    yes
+                 0.6       0.111      0.75      0.6       0.667      0.744    no
+Weighted Avg.    0.786     0.297      0.782     0.786     0.779      0.744
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 8 1 | a = yes
+ 2 3 | b = no
+

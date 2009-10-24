@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.KStar -B 20 -M a
+Relation:     weather.symbolic
+Instances:    14
+Attributes:   5
+              outlook
+              temperature
+              humidity
+              windy
+              play
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+KStar Beta Verion (0.1b).
+Copyright (c) 1995-97 by Len Trigg (trigg@cs.waikato.ac.nz).
+Java port to Weka by Abdelaziz Mahoui (am14@cs.waikato.ac.nz).
+
+KStar options : -B 20 -M a  
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances           8               57.1429 %
+Incorrectly Classified Instances         6               42.8571 %
+Kappa statistic                          0.0667
+Mean absolute error                      0.4711
+Root mean squared error                  0.5433
+Relative absolute error                 98.9405 %
+Root relative squared error            110.1307 %
+Total Number of Instances               14     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.667     0.6        0.667     0.667     0.667      0.489    yes
+                 0.4       0.333      0.4       0.4       0.4        0.489    no
+Weighted Avg.    0.571     0.505      0.571     0.571     0.571      0.489
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 6 3 | a = yes
+ 3 2 | b = no
+

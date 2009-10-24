@@ -1,0 +1,44 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IB1 
+Relation:     weather.symbolic
+Instances:    14
+Attributes:   5
+              outlook
+              temperature
+              humidity
+              windy
+              play
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 classifier
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances           7               50      %
+Incorrectly Classified Instances         7               50      %
+Kappa statistic                          0.0392
+Mean absolute error                      0.5   
+Root mean squared error                  0.7071
+Relative absolute error                105      %
+Root relative squared error            143.3236 %
+Total Number of Instances               14     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.444     0.4        0.667     0.444     0.533      0.522    yes
+                 0.6       0.556      0.375     0.6       0.462      0.522    no
+Weighted Avg.    0.5       0.456      0.563     0.5       0.508      0.522
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 4 5 | a = yes
+ 2 3 | b = no
+
